@@ -15,7 +15,7 @@
 
 using namespace v8;
 
-int vasprintf (char **strp, const char *fmt, va_list ap);
+//int vasprintf (char **strp, const char *fmt, va_list ap);
 
 static xmlDoc* copyDocument(Local<Value> input) {
     libxmljs::XmlDocument* docWrapper =
@@ -31,7 +31,7 @@ static void xslt_generic_error_handler(void * ctx, const char *msg, ...)
   char * message;
   va_list args;
   va_start(args, msg);
-  vasprintf(&message, msg, args);
+  //vasprintf(&message, msg, args);
   va_end(args);
   strncpy((char*)ctx, message, 2048);
   free(message);
